@@ -13,8 +13,8 @@ namespace RankingProjectPostgres
 {
     public partial class Form1 : Form
     {
-
-        // PostgeSQL-style connection string
+       
+        // PostgeSQL-style connection string to database
         string connstring = String.Format("Server={0};Port={1};" +
             "User Id={2};Password={3};Database={4};",
            "localhost",5222,"postgres",
@@ -35,7 +35,7 @@ namespace RankingProjectPostgres
         {
             // Making connection with Npgsql provider
             conn = new NpgsqlConnection(connstring);
-          
+            // Display rows
             Select();
            
         }
